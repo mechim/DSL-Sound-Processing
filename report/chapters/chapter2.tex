@@ -1,0 +1,103 @@
+\chapter{Language Overview}
+
+In the first block of the program, the user will be able to manipulate and modify sounds. This can include changing the pitch, adding effects such as reverb or distortion, or chopping up the sound into smaller samples. The DSL will provide a variety of tools and options for the user to experiment with, allowing them to create unique and interesting sounds. Additionally, the program may allow the user to import their own audio files to use in their compositions, giving them even more flexibility and creative control.
+
+Once the user has created and modified their sounds in the first block of the program, they will move on to the second block to compose their track. In this block, the user will be able to place their sounds on a timeline, specifying the exact moment when each sound should be played. They may also be able to adjust the volume and other parameters of each sound within the track, and add additional effects or transitions between sounds. As the user works on their composition, they may be able to listen to the track as it is being built, allowing them to make adjustments and refine the sound until it is exactly what they are looking for. Ultimately, the DSL will allow the user to express their creativity and musical ideas in a tangible way, creating a unique and personalized composition that is entirely their own.
+
+\section{The computational model}
+Sound processing DSL would likely involve performing 
+mathematical operations on audio data. This could include 
+operations such as filtering, equalization, time stretching, pitch 
+shifting, and more. These operations would typically be performed 
+on a digital representation of the audio waveform, such as a 
+sequence of samples.
+
+The computational model for performing these operations would 
+likely involve designing algorithms and data structures for 
+representing and manipulating audio data. These algorithms would 
+need to take into account factors such as sample rate, bit depth, 
+and channel count, as well as the specific operations being 
+performed.
+
+\section{Basic data structures}
+For creating a fully fledged DSL for sound processing it would be important to implement the following data structures: 
+
+\begin{itemize}
+\hitem An audio buffer which is a fixed-length array of samples that represents an audio signal. It is the fundamental data structure used to represent audio data in a digital audio system. The audio buffer can be used to store audio signals before and after processing.
+
+\hitem Filters are commonly used in audio processing to manipulate audio signals. Digital filters, such as Finite Impulse Response (FIR) or Infinite Impulse Response (IIR), are often represented using coefficients that are stored in arrays or matrices.
+
+\hitem A spectrogram is a visual representation of the spectrum of 
+frequencies of an audio signal as it changes over time. Spectrograms 
+can be represented as a matrix or a multi-dimensional array, where 
+each element represents the energy of a frequency at a specific 
+time.
+
+\hitem Musical notation can be used to represent the pitch,if the DSL supports music composition, duration, and timing of notes. Musical notation can be represented using data structures such as lists or trees, where each element represents a note or a chord.
+\end{itemize}
+
+\section{Basic control structures}
+The given DSL will have the following control structures to provide the user with a tool for sound manipulation:
+
+\begin{itemize}
+\hitem Functions are commonly used to manipulate audio signals in a DSL for sound processing. For example, one might define functions to apply filters, equalization, or other transformations to an audio signal.
+
+\hitem Loops can be used to process audio signals in real-time or to iterate over a sequence of audio samples. For example, a user might use a loop to apply an effect to a section of an audio signal.
+
+\hitem Conditionals can be used to apply different processing to an audio signal depending on the values of certain parameters or 
+variables. 
+
+\hitem Events can be used to trigger changes in the sound, such 
+as starting or stopping a sound effect or changing the volume.
+\end{itemize}
+
+The user interface for the DSL can be designed to provide a 
+variety of ways for users to manipulate sound. This can include 
+graphical user interfaces, command-line interfaces, or even 
+physical controllers such as MIDI keyboards or DJ mixers.
+The user can manipulate sound in the DSL using these control 
+structures and interfaces. For example, a user might write a 
+function to filter out high-frequency noise in an audio signal or 
+use a loop to create a repeating pattern of notes. The user might 
+also adjust parameters such as volume, tempo, or filter cutoff 
+frequency using the user interface.
+
+\section{Inputs and outputs of the DSL}
+The most common input methods would include:
+\begin{itemize}
+    \hitem Audio files: Audio files can be used as input to the 
+    DSL, allowing users to load existing audio recordings or sound 
+    effects to be processed,
+    \hitem Real-time audio: Real-time audio can be used as input to 
+    the DSL, allowing users to process audio signals in real-time 
+    as they are generated by microphones or other sources,
+    \hitem MIDI data: MIDI data can be used as input to the DSL, 
+    allowing users to control synthesizers or other instruments in 
+    real-time.
+\end{itemize}
+
+The output formats would be the same as the input ones but they 
+would obviously be modified by the script given by the user.
+
+\section{Error handling}
+Error handling is an important aspect of any programming language, 
+including a DSL (Domain Specific Language) for sound processing. 
+The DSL should provide a clear and consistent mechanism for 
+detecting and reporting errors to users.
+
+Exceptions can be used to handle errors that occur during runtime. 
+When an exception is thrown, the DSL can display an error message 
+to the user and terminate the program or, in some cases, try to 
+recover from the error and continue execution.
+The given DSL will include validation checks to catch errors before they occur during runtime. For example, the  DSL might check that a user-provided file exists and is in the correct format before attempting to load it. Validation can help prevent errors that might otherwise result in exceptions or unexpected behavior.
+
+Warnings can be used to alert users to potential issues that do not 
+necessarily prevent execution of the program. For example, the DSL 
+might display a warning when a user sets a parameter value outside 
+of a recommended range, but still allow the program to execute.
+The DSL to be implemented can provide debugging tools to help users diagnose errors during runtime. For example, the DSL might provide a way for users to inspect the values of variables or print debugging messages to the console.
+
+Clear documentation can help users understand how to use the DSL 
+and avoid errors. The DSL will provide documentation that 
+describes its features and functionality, as well as any 
+limitations or constraints that users should be aware of.

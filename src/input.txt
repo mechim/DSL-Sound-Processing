@@ -1,0 +1,23 @@
+func process(){
+    a = load(pianoa.mp3)
+    b = load(pianob.mp3)
+    c = load(pianoc.mp3)
+    e = load(pianoe.mp3)
+
+    cut(a, 0, 3)
+    cut(b, 0, 3)
+    setgain(c, 20)
+    cut(c, 0, 3)
+    setgain(e, 20)
+    bb = b
+}
+func compose(){
+    layer(bb, c)
+    splice(a, b)
+    splice(a,c)
+    splice(a, bb) 
+    aa = a
+    changepitch(aa, 1.2)
+    splice(a, aa)
+    play(a)
+}
